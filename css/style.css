@@ -1,7 +1,26 @@
 .center { 
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 63px;
-	margin-bottom: 3px;
+	margin-top: auto;
+	margin-bottom: auto;
 	text-align: center;
+}
+
+p {
+	margin: 0px;
+}
+
+header {
+	color: white;
+	background-color; black;
+}
+
+#clubBadge {
+	height: 10%;
+	width: 80%;
+}
+
+img {
+	display: block;
+	margin: auto;
 }
