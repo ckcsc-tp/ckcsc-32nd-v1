@@ -11,8 +11,9 @@ p {
 }
 
 header {
+	font-size: 50px;
 	color: white;
-	background-color; black;
+	background-color: black;
 }
 
 #clubBadge {
@@ -24,3 +25,37 @@ img {
 	display: block;
 	margin: auto;
 }
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background-color: #f1f1f1;
+}
+
+li a{
+	display: block;
+	color: #000;
+	padding: 8px16px;
+	text-decoration: none;
+}
+
+/*Changethelinkcoloronhover*/
+li a: hover{
+	background-color: #555;
+	color: white;
+}
+/*
+header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+header ul a {
+	display: block;
+	width; 60px;
+}
+*/
