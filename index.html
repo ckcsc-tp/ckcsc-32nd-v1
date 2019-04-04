@@ -4,11 +4,25 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<meta charset="UTF-8"/>
 		<meta content="width=device-width, initial-scale=1"/>
-		<link href="css/style.css" rel="stylesheet"/>
+		<link href="/css/style.css" rel="stylesheet"/>
+		<!--
+		<link href="/css/mobile.css" rel="stylesheet" media="screen and (max-width: 600px)"/>
+		-->
 		<title>CKCSC 32nd</title>
 		<script>
 			$(document).ready(function(){
 				$('#header').load('/common/header.html');
+			});
+			$(window).resize(function(){
+				if($(window).width() <= 600){
+					$('body').css('font-size','150%');
+					$('.material-icons').css('font-size','130%');
+					$('body').css('background-color','red');
+				}else{
+					$('body').css('font-size','100%');
+					$('.material-icons').css('font-size','100%');
+					$('body').css('background-color','white');
+				}
 			});
 		</script>
 	</head>
