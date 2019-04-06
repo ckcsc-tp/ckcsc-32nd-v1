@@ -13,6 +13,7 @@
 
 #headerBar li { 
 	float: left;
+	height: 100%;
 }
 
 #headerBar li a { 
@@ -25,4 +26,8 @@
 
 #headerBar li a:hover { 
 	background-color: #111;
+}
+
+#headerBar img {
+	max-height: 30px;
 }
