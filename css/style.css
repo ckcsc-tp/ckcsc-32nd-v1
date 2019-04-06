@@ -10,6 +10,18 @@ p {
 	margin: 0px;
 }
 
+html, body {
+	height: 100%;
+}
+
+#header, #footer {
+	background-color: blue;
+}
+
 #main {
-	margin-bottom: -50;
+	height: 100%
+}
+
+#wrap {
+	height: 93%
 }

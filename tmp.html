@@ -1,34 +1,27 @@
-<html>
-<head>
-    <style>
-        html,body,form { height: 100%; }
-        .wrap {
-            min-height: 100%;
-            *display: table; /* For IE7 Hack */
-            *height: 100%; /* For IE7 Hack */
-        }
-        .main {
-            overflow: auto;
-            padding-bottom: 180px;
-        } /* must be same height as the footer */
-        footer {
-            background-color: red;
-            position: relative;
-            margin-top: -180px; /* negative value of footer height */
-            height: 180px;
-            clear: both;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-
-       <div class="wrap">
-            <header>Your Header</header>
-         <div class="main">Your Main Content</div>
-        </div>
-       <footer>111</footer>
-
-       </form>
-   </body>
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<meta charset="UTF-8"/>
+		<meta content="width=device-width, initial-scale=1"/>
+		<link href="/css/style.css" rel="stylesheet"/>
+		<link href="/css/mobile.css" rel="stylesheet" media="screen and (max-width: 600px)"/>
+		<title>CKCSC 32nd</title>
+		<style>
+		</style>
+	</head>
+	<body class="center">
+		<div id="wrap">
+			<div id="header">
+				<script>$('#header').load('/common/header.html');</script>
+			</div>
+			<div id="main">
+				<h1>CKCSC 32nd</h1>
+				<h2>成功高中電子計算機研習社</h2>
+			</div>
+		</div>
+		<div id="footer">
+			<script>$('#footer').load('/common/footer.html');</script>
+		</div>
+	</body>
 </html>
