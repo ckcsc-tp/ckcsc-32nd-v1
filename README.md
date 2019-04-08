@@ -1,2 +1,2 @@
 # ckscs.github.io
-[website](https://ckcsc-32nd.github.io.tw)
+[website](https://ckcsc-32nd.github.io)
