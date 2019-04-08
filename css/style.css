@@ -39,3 +39,11 @@ html, body {
 #header {
 	height: 50px;
 }
+
+.hiden-white {
+	color: white;
+}
+
+.hiden-gray {
+	color: #333;
+}
