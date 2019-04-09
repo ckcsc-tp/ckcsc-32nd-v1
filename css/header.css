@@ -31,3 +31,10 @@
 #headerBar img {
 	max-height: 30px;
 }
+
+#headerBar #icon {
+	padding: 0px;
+	margin-top: 7px; 
+	margin-left: 7px; 
+	margin-right: 7px; 
+}
