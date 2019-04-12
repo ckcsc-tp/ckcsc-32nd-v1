@@ -1,4 +1,4 @@
-# ckscs.github.io
+# ckcsc.github.io
 [website](https://ckcsc-32nd.github.io)
 │
 ├
