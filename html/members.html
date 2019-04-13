@@ -14,6 +14,16 @@
 				<div id="main">
 					<!--put content here-->
 					<h1>This are members in CKCSC 32nd</h1>
+					<div id="intro-table"></div>
+					<script>
+						var write = document.write;
+						var introTable = $("intro-table");
+						var members;
+						$.getJSON('/member.json',function(result){
+							console.table(result);
+							write(result);
+						});
+					</script>
 				</div>
 			</div>
 			<div id="footer">
