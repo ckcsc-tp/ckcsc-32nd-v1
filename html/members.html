@@ -15,13 +15,19 @@
 					<!--put content here-->
 					<h1>This are members in CKCSC 32nd</h1>
 					<div id="intro-table"></div>
+					<div class="card">
+						<img src="/Img/members/"
+					</div>
 					<script>
-						var write = document.write;
-						var introTable = $("intro-table");
+						var introTable = $("#intro-table");
 						var members;
+						var card1 = '<div class="card"><div class="card-header>"';
+						var card2 = '</div><div class="card-body">';
 						$.getJSON('/member.json',function(result){
-							console.table(result);
-							write(result);
+							for(var i in result){
+							//	console.log(i)
+								introTable.append(`<img src="/Img/members/${i}.jpg" class="rounded" alt="${i}">`);
+							}
 						});
 					</script>
 				</div>
