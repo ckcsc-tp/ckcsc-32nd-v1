@@ -23,8 +23,8 @@
 						$.getJSON('/member.json',function(result){
 							for(var i in result){
 							//	console.log(i)
-							//	console.log(`${i} -> ${result[i]}`);
-								introTable.append(`<div class="card" style="width:200px"><img class="card-img-top" src="/Img/members/${i}.jpg"><div class="card-body"><h4 class="card-title">${i}</h4><p class="card-text">${result[i]}</p></div></div>`);
+								console.log(`${i} -> ${result[i].name} --> ${result[i].job} `);
+								introTable.append(`<div class="card" style="width:200px"><img class="card-img-top" src="/Img/members/${i}.jpg"><div class="card-body"><h4 class="card-title">${result[i].name}</h4><p class="card-text">${result[i].job}</p></div></div>`);
 							}
 						});
 					</script>

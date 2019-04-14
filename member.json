@@ -1,20 +1,87 @@
 {
-	"王一樺": ["公關","美宣"],
-	"王品翔": ["教學"],
-	"王敬為": ["教學"],
-	"田明璋": ["美宣"],
-	"江冠緯": ["未知"],
-	"吳政儒": ["社長"],
-	"李昶昇": ["教學"],
-	"沈宇韜": ["公關"],
-	"唐瑋駿": ["文書","公關"],
-	"梁恩齊": ["教學"],
-	"郭宸傑": ["網管"],
-	"陳宏彰": ["網管","教學"],
-	"劉宸瑋": ["公關"],
-	"蔡仲恩": ["總務"],
-	"鄭皓元": ["副社長"],
-	"盧益甫": ["公關"],
-	"魏士勛": ["美宣","教學"],
-	"蘇昱安": ["公關"]
+	"1": {
+		"name": "王一樺",
+		"job": ["公關","美宣"],
+		"avatar": "/Img/members/01.jpg"
+	},
+	"2": {
+		"name": "王品翔",
+		"job": ["教學"],
+		"avatar": "/Img/members/02.jpg"
+	},
+	"3": {
+		"name": "王敬為",
+		"job": ["教學"],
+		"avatar": "/Img/members/03.jpg"
+	},
+	"4": {
+		"name": "田明璋",
+		"job": ["美宣"],
+		"avatar": "/Img/members/04.jpg"
+	},
+	"5": {
+		"name": "吳政儒",
+		"job": ["社長"],
+		"avatar": "/Img/members/05.jpg"
+	},
+	"6": {
+		"name": "李昶昇",
+		"job": ["教學"],
+		"avatar": "/Img/members/06.jpg"
+	},
+	"7": {
+		"name": "沈宇韜",
+		"job": ["公關"],
+		"avatar": "/Img/members/07.jpg"
+	},
+	"8": {
+		"name": "唐瑋駿",
+		"job": ["文書","公關"],
+		"avatar": "/Img/members/08.jpg"
+	},
+	"9": {
+		"name": "梁恩齊",
+		"job": ["教學"],
+		"avatar": "/Img/members/09.jpg"
+	},
+	"10": {
+		"name": "郭宸傑",
+		"job": ["網管"],
+		"avatar": "/Img/members/10.jpg"
+	},
+	"11": {
+		"name": "陳宏彰",
+		"job": ["網管","教學"],
+		"avatar": "/Img/members/11.jpg"
+	},
+	"12": {
+		"name": "劉宸瑋",
+		"job": ["公關"],
+		"avatar": "/Img/members/12.jpg"
+	},
+	"13": {
+		"name": "蔡仲恩",
+		"job": ["總務"],
+		"avatar": "/Img/members/13.jpg"
+	},
+	"14": {
+		"name": "鄭皓元",
+		"job": ["副社長"],
+		"avatar": "/Img/members/14.jpg"
+	},
+	"15": {
+		"name": "盧益甫",
+		"job": ["公關"],
+		"avatar": "/Img/members/15.jpg"
+	},
+	"16": {
+		"name": "魏士勛",
+		"job": ["美宣","教學"],
+		"avatar": "/Img/members/16.jpg"
+	},
+	"17": {
+		"name": "蘇昱安",
+		"job": ["公關"],
+		"avatar": "/Img/members/17.jpg"
+	}
 }
