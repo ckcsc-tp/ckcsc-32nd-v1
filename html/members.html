@@ -5,30 +5,27 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>$('head').load('/common/head.html');</script>
 	</head>
-	<body class="center">
-		<div id="page-container">
-			<div id="wrap">
-				<div id="header">
-					<script>$('#header').load('/common/header.html')</script>
+	<body>
+		<div id="container-fulid">
+			<div id="header">
+				<script>$('#header').load('/common/header.html')</script>
+			</div>
+			<div id="main" class="text-center">
+				<h1>32屆幹部</h1>
+				<div class="card-columns">
+					<div id="intro-table"></div>
 				</div>
-				<div id="main container">
-					<!--put content here-->
-					<h1>32屆幹部</h1>
-					<div class="card-columns">
-						<div id="intro-table"></div>
-					</div>
-					<script>
-						var introTable = $("#intro-table");
-						var members;
-						$.getJSON('/member.json',function(result){
-							for(var i in result){
-							//	console.log(i)
-								console.log(`${i} -> ${result[i].name} --> ${result[i].job} `);
-								introTable.append(`<div class="card" style="width:200px"><img class="card-img-top" src="/Img/members/${i}.jpg"><div class="card-body"><h4 class="card-title">${result[i].name}</h4><p class="card-text">${result[i].job}</p></div></div>`);
-							}
-						});
-					</script>
-				</div>
+				<script>
+					var introTable = $("#intro-table");
+					var members;
+					$.getJSON('/member.json',function(result){
+						for(var i in result){
+						//	console.log(i)
+							console.log(`${i} -> ${result[i].name} --> ${result[i].job} `);
+							introTable.append(`<div class="card" style="width:200px"><img class="card-img-top" src="/Img/members/${i}.jpg"><div class="card-body"><h4 class="card-title">${result[i].name}</h4><p class="card-text">${result[i].job}</p></div></div>`);
+						}
+					});
+				</script>
 			</div>
 			<div id="footer">
 				<script>$('#footer').load('/common/footer.html')</script>
