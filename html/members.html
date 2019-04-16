@@ -19,18 +19,18 @@
 					var introTable = $("#intro-table");
 					var members;
 					$.getJSON('/json/member.json',function(result){
+						console.log(result);
 						for(var i in result){
 						//	console.log(i)
 							console.log(`${i} -> ${result[i].name} --> ${result[i].job} `);
 							var card = ""
 							card += `<div class="card" style="width:200px">`;
-							card += `  <img class="card-img-top" src="http://graph.facebook.com/${result[i].fbid}/picture?type=square>"`;
+							card += `  <img class="card-img-top" src="/Img/members/${i}.jpg">`;
 							card += `  <div class="card-body">`;
 							card += `    <h4 class="card-title">${result[i].name}</h4>`;
 							card += `    <p class="card-text">${result[i].job}</p>`;
 							card += `  </div>`;
 							card += `</div>`;
-							console.log(card)
 							introTable.append(card);
 						}
 					});
