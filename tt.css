@@ -1,9 +1,0 @@
-
-			.card-columns{
-				@include media-break point-only(lg){
-					column-count:4;
-				}
-				@include media-break point-only(xl){
-					column-count: 5;
-				}
-			}
