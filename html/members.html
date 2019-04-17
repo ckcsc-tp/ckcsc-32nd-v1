@@ -5,8 +5,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>$('head').load('/common/head.html');</script>
 		<style>
-			.card-columns{
-				column-count:4;
+			a {
+				text-decoration: none;
+				color: black;
 			}
 		</style>
 	</head>
@@ -22,19 +23,20 @@
 				</div>
 				<script>
 					var introTable = $("#intro-table");
-					var members;
-					$.getJSON('/member.json',function(result){
+					$.getJSON('/json/member.json',function(result){
 						for(var i in result){
 						//	console.log(i)
 							console.log(`${i} -> ${result[i].name} --> ${result[i].job} `);
 							var card = ""
-							card += `<div class="card" style="width:150px">`;
-							card += `  <img class="card-img-top" src="/Img/members/${i}.jpg">`;
-							card += `  <div class="card-body">`;
-							card += `    <h4 class="card-title">${result[i].name}</h4>`;
-							card += `    <p class="card-text">${result[i].job}</p>`;
+							card += `<a href="${result[i].fb}"`;
+							card += `  <div class="card" style="width:150px">`;
+							card += `    <img class="card-img-top" src="/Img/members/${i}.jpg">`;
+							card += `    <div class="card-body">`;
+							card += `      <h4 class="card-title">${result[i].name}</h4>`;
+							card += `      <p class="card-text">${result[i].job}</p>`;
+							card += `    </div>`;
 							card += `  </div>`;
-							card += `</div>`;
+							card += `</a>`
 							introTable.append(card);
 						}
 					});
