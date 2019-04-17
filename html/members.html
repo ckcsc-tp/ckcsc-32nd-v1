@@ -4,12 +4,6 @@
 		<meta charset="UTF-8"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>$('head').load('/common/head.html');</script>
-		<style>
-			a {
-				text-decoration: none;
-				color: black;
-			}
-		</style>
 	</head>
 	<body>
 		<div id="container-fulid">
@@ -24,19 +18,27 @@
 				<script>
 					var introTable = $("#intro-table");
 					$.getJSON('/json/member.json',function(result){
+						var count = 0;
 						for(var i in result){
 						//	console.log(i)
 							console.log(`${i} -> ${result[i].name} --> ${result[i].job} `);
-							var card = ""
-							card += `<a href="${result[i].fb}"`;
-							card += `  <div class="card" style="width:150px">`;
-							card += `    <img class="card-img-top" src="/Img/members/${i}.jpg">`;
-							card += `    <div class="card-body">`;
-							card += `      <h4 class="card-title">${result[i].name}</h4>`;
-							card += `      <p class="card-text">${result[i].job}</p>`;
+							var card = "";
+							if(count == 0){
+								card += `<div class="card-group">`;
+							}
+							card += `  <a href="${result[i].fb}" style="color: black;text-decoration: none"`;
+							card += `    <div class="card" style="width:150px">`;
+							card += `      <img class="card-img-top" src="/Img/members/${i}.jpg">`;
+							card += `      <div class="card-body">`;
+							card += `        <h4 class="card-title">${result[i].name}</h4>`;
+							card += `        <p class="card-text">${result[i].job}</p>`;
+							card += `      </div>`;
 							card += `    </div>`;
-							card += `  </div>`;
-							card += `</a>`
+							card += `  </a>`;
+							if(count == 5){
+								card += `</div>`;
+								count = 0;
+							}
 							introTable.append(card);
 						}
 					});
