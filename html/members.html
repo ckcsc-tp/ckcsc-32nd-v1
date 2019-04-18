@@ -12,11 +12,11 @@
 			</div>
 			<div id="main" class="text-center">
 				<h1>32屆幹部</h1>
-				<div class="card-columns">
+				<div class="card-columns" id="card-container">
 					<div id="intro-table"></div>
 				</div>
 				<script>
-					var introTable = $("#intro-table");
+					var introTable = $("#card-container");
 					$.getJSON('/json/member.json',function(result){
 						var count = 0;
 						for(var i in result){
@@ -38,8 +38,12 @@
 							if(count == 5){
 								card += `</div>`;
 								count = 0;
+								console.log("------------------")
+							}else{
+								count ++;
 							}
 							introTable.append(card);
+							console.log(count);
 						}
 					});
 				</script>
