@@ -16,36 +16,27 @@
 			<div id="header">
 				<script>$('#header').load('/common/header.html');</script>
 			</div>
-				<!--
-			<div class="text-center">
-				<div class="card-group">
-					<div class="card bg-light"><p>test</p></div>
-					<div class="card bg-light"><p>test</p></div>
-					<div class="card bg-light"><p>test</p></div>
-					<div class="card bg-light"><p>test</p></div>
-					<div class="card bg-light"><p>test</p></div>
-					<div class="card bg-light"><p>test</p></div>
-				</div>
-
-			</div>
-				-->
-			<div class="cards"></div>
+			<div id="cards"></div>
 			<script>
-				var cards = $('.cards');
+				var card = "";
 				var i = 0;
 				for(var j = 0; j < 17; j++){
 					console.log(i);
-					var card = "";
-					if(i == 0) card += `<div class="card-group">`
-					card += `<div class="card bg-light"><p>test</p></div>`;
+					if(i == 0){
+						card += "<div class='card-group row'>";
+						console.log("==========");
+					}
+					card += `<div class="card bg-light col-sm-2"><p>test</p></div>`;
 					if(i == 5){
-						card += `</div>`;
+						card += "</div>";
 						i = 0;
+						console.log("----------");
 					}else{
 						i ++;
 					}
 				}
-
+				$('#cards').append(card);
+				console.log(card)
 			</script>
 			<div id="footer">
 				<script>$('#footer').load('/common/footer.html');</script>

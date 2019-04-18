@@ -18,23 +18,22 @@
 				<script>
 					var introTable = $("#card-container");
 					$.getJSON('/json/member.json',function(result){
+						var card = "";
 						var count = 0;
 						for(var i in result){
 						//	console.log(i)
-							console.log(`${i} -> ${result[i].name} --> ${result[i].job} `);
-							var card = "";
 							if(count == 0){
-								card += `<div class="card-group">`;
+								card += `<div class="card-group row">`;
 							}
-							card += `  <a href="${result[i].fb}" style="color: black;text-decoration: none"`;
-							card += `    <div class="card" style="width:150px">`;
-							card += `      <img class="card-img-top" src="/Img/members/${i}.jpg">`;
+//							card += `  <a href="${result[i].fb}" style="color: black;text-decoration: none">`;
+							card += `    <div class="card col-sm-2" style="width:150px">`;
+//							card += `      <img class="card-img-top" src="/Img/members/${i}.jpg">`;
 							card += `      <div class="card-body">`;
 							card += `        <h4 class="card-title">${result[i].name}</h4>`;
 							card += `        <p class="card-text">${result[i].job}</p>`;
 							card += `      </div>`;
 							card += `    </div>`;
-							card += `  </a>`;
+//							card += `  </a>`;
 							if(count == 5){
 								card += `</div>`;
 								count = 0;
@@ -42,9 +41,10 @@
 							}else{
 								count ++;
 							}
-							introTable.append(card);
 							console.log(count);
 						}
+						$('#intro-table').append(card);
+						console.log(card);
 					});
 				</script>
 			</div>
