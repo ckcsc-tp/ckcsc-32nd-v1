@@ -12,11 +12,8 @@
 			</div>
 			<div id="main" class="text-center">
 				<h1>32屆幹部</h1>
-				<div class="card-columns" id="card-container">
-					<div id="intro-table"></div>
-				</div>
+				<div id="intro-table"></div>
 				<script>
-					var introTable = $("#card-container");
 					$.getJSON('/json/member.json',function(result){
 						var card = "";
 						var count = 0;
@@ -25,15 +22,15 @@
 							if(count == 0){
 								card += `<div class="card-group row">`;
 							}
-//							card += `  <a href="${result[i].fb}" style="color: black;text-decoration: none">`;
 							card += `    <div class="card col-sm-2" style="width:150px">`;
-//							card += `      <img class="card-img-top" src="/Img/members/${i}.jpg">`;
+							card += `  <a href="${result[i].fb}" style="color: black;text-decoration: none">`;
+							card += `      <img class="card-img-top" src="/Img/members/${i}.jpg">`;
 							card += `      <div class="card-body">`;
 							card += `        <h4 class="card-title">${result[i].name}</h4>`;
 							card += `        <p class="card-text">${result[i].job}</p>`;
 							card += `      </div>`;
+							card += `  </a>`;
 							card += `    </div>`;
-//							card += `  </a>`;
 							if(count == 5){
 								card += `</div>`;
 								count = 0;
