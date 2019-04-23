@@ -27,7 +27,7 @@
 				<script>
 					$.getJSON('/json/events.json',function(result){
 						for(var i in result){
-							alert(`${i} >> ${result[i]}`)
+							$('#event').append(`<li><a href="/html/events.html/#${i}">${result[i]}</a></li>`);
 						}
 					});
 				</script>
