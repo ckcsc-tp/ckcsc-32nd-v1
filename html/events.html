@@ -13,7 +13,7 @@
 			<div class="text-center">
 				<!--put main here-->
 				<h1>活動</h1>
-				<ul>
+				<ul id="event">
 					<li><a href="#summer-camp">四校暑訓</a></li>
 					<li><a href="#welcome-camp">七校迎新</a></li>
 					<li><a href="#union-class">四校社課</a></li>
@@ -24,6 +24,13 @@
 					<li><a href="#farewell">楓成送舊</a></li>
 					<li><a href="#handover">成景茶會</a></li>
 				</ul>
+				<script>
+					$.getJSON('/json/events.json',function(result){
+						for(var i in result){
+							alert(`${i} >> ${result[i]}`)
+						}
+					});
+				</script>
 			</div>
 			<div id="summer-camp"></div>
 			<div id="#welcome-camp"></div>
